@@ -26,6 +26,11 @@ class CatsController < ApplicationController
         render :show
       end
     
+      def edit
+        @cat = Cat.find(params[:id])
+        render :edit
+      end
+
       def update
         @artwork = Artwork.find(params[:id])
     
