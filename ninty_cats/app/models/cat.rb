@@ -15,6 +15,7 @@ require "date"
 #  updated_at  :datetime         not null
 #
 class Cat < ApplicationRecord
+    
     include ActionView::Helpers::DateHelper
 
     CAT_COLORS = ["Orange", "White", "Blue", "Black","Tabby", "Tri-Color"]
@@ -22,15 +23,15 @@ class Cat < ApplicationRecord
     validates :color, inclusion: { in: CAT_COLORS}
     validates :sex, inclusion: {in: ["F", "M"]}
     validate :birth_date_cannot_be_future
+    
     def birth_date_cannot_be_future
-        if birth_date > Date.today
+        if self.birth_date > Date.today
             errors.add(:birth_date, "can't be in the future")
         end
     end 
 
     def age
-        debugger
-        time_ago_in_words(Time.new(:birth_date))
+        time_ago_in_words(birth_date)
     end
 
 
