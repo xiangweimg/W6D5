@@ -887,3 +887,269 @@ Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 1.0ms | Allocations: 2048
 
 
   [1m[36mCat Load (5.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/cats/1/edit" for ::1 at 2022-08-26 17:31:24 -0400
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.9ms | Allocations: 360)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 10.0ms | Allocations: 636)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 2201)
+Completed 200 OK in 56ms (Views: 23.1ms | ActiveRecord: 8.2ms | Allocations: 6491)
+
+
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Started GET "/cats/1/edit" for ::1 at 2022-08-26 17:33:27 -0400
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.4ms | Allocations: 362)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 2222)
+Completed 200 OK in 21ms (Views: 15.1ms | ActiveRecord: 0.8ms | Allocations: 3506)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-08-26 17:33:32 -0400
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:30:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.5ms | Allocations: 65)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1342)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 2140)
+
+
+Started GET "/cats/new" for ::1 at 2022-08-26 17:46:05 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 8.1ms | Allocations: 355)
+  Rendered cats/new.html.erb within layouts/application (Duration: 24.4ms | Allocations: 631)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 2222)
+Completed 200 OK in 35ms (Views: 33.7ms | Allocations: 2918)
+
+
+Started GET "/cats/new" for ::1 at 2022-08-26 17:48:11 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.3ms | Allocations: 365)
+  Rendered cats/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 641)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2250)
+Completed 200 OK in 13ms (Views: 12.4ms | Allocations: 2967)
+
+
+Started GET "/cats/new" for ::1 at 2022-08-26 17:48:18 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.9ms | Allocations: 364)
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 640)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2231)
+Completed 200 OK in 11ms (Views: 10.4ms | Allocations: 2948)
+
+
+Started GET "/cats/new" for ::1 at 2022-08-26 17:53:43 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.1ms | Allocations: 97)
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1646)
+Completed 200 OK in 20ms (Views: 1.8ms | ActiveRecord: 7.7ms | Allocations: 7707)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:54:03 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-05-01", "description"=>" \r\n                "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms | Allocations: 1375)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:54:04 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-05-01", "description"=>" \r\n                "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms | Allocations: 826)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:54:05 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-05-01", "description"=>" \r\n                "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 826)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:54:05 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-05-01", "description"=>" \r\n                "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 826)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:54:05 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-05-01", "description"=>" \r\n                "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:54:05 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-05-01", "description"=>" \r\n                "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+  [1m[36mCat Load (1.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Started GET "/cats/new" for ::1 at 2022-08-26 17:55:58 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.3ms | Allocations: 64)
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 1514)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 1770)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:56:11 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n              hi"}, "color"=>"Tabby"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 824)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:56:12 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n              hi"}, "color"=>"Tabby"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 824)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:56:12 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n              hi"}, "color"=>"Tabby"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:56:12 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n              hi"}, "color"=>"Tabby"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:56:13 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n              hi"}, "color"=>"Tabby"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:56:13 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n              hi"}, "color"=>"Tabby"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:56:13 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n              hi"}, "color"=>"Tabby"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 826)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:56:16 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n              hi"}, "color"=>"Tabby"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 824)
+
+
+Started GET "/cats/new" for ::1 at 2022-08-26 17:58:54 -0400
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.3ms | Allocations: 50)
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1323)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 1538)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:58:56 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"", "sex"=>"M", "birth_date"=>"", "description"=>" \r\n                "}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1799)
+
+
+
+NoMethodError - undefined method `>' for nil:NilClass
+        if self.birth_date > Date.today
+                           ^:
+  app/models/cat.rb:28:in `birth_date_cannot_be_future'
+  app/controllers/cats_controller.rb:15:in `create'
+
+Started POST "/__better_errors/78625522c7a09ba2/variables" for ::1 at 2022-08-26 17:58:56 -0400
+Started POST "/cats" for ::1 at 2022-08-26 17:59:11 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n     hi           "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 895)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:59:11 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n     hi           "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:59:11 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n     hi           "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:59:11 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n     hi           "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:59:11 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n     hi           "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started POST "/cats" for ::1 at 2022-08-26 17:59:11 -0400
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"darian", "sex"=>"M", "birth_date"=>"2022-06-05", "description"=>" \r\n     hi           "}, "color"=>"Black"}
+No template found for CatsController#create, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 822)
+
+
+Started GET "/cats" for ::1 at 2022-08-26 17:59:18 -0400
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1096)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2450)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 1.9ms | Allocations: 2833)
+
+

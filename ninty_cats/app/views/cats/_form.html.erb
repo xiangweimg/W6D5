@@ -1,15 +1,17 @@
+  <% if type == :new %>
+    <% action_url = cats_url %>
+    <% button_text = "Create Cat" %>
+  <% end %>
 
-
-<form action="<%= new_cat_url%>" method="post">
+<form action="<%= action_url%>" method="post">
 
 <% if type == :edit %>
       <input type="hidden" name="_method" value="PATCH" />
 <% end %>
     
 
-<% if type == :edit %>
             <label for= "name"> Name
-            <input id="name" type="text" name="cat[name]" value=""<%= cat.name%>/>
+            <input id="name" type="text" name="cat[name]" value="<%= cat.name%>"/>
             </label>
             <br>
             <label for= "color"> Color
@@ -38,8 +40,8 @@
                 <textarea id="description" cols = "30" rows = "10" name="cat[description]"> <%= cat.description%>
                 </textarea>
             </label>
-<% end %>
-
+            <br>
+            <input type="submit" value="<%= button_text %>" />
 </form>
 
 

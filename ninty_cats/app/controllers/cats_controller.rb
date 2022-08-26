@@ -10,14 +10,12 @@ class CatsController < ApplicationController
     end
         
       def create
-        @artwork = Artwork.new(params.require(:artwork).permit(:title, :img_url, :artist_id))
-        # replace the `artwork_attributes_here` with the actual attribute keys
-        @artwork.save
-    
-        if @artwork.save
-          render json: @artwork
+        @cat = Cat.new(cat_params)
+        # replace the `artwork_attributes_here` with the actual attribute keys    
+        if @cat.save
+          redirect_to cat_url(@cat)
         else
-          render json: @artwork.errors.full_messages, status: :unprocessable_entity
+          
         end
       end
     
