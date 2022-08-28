@@ -9,15 +9,14 @@ class CatsController < ApplicationController
         render :new
     end
         
-      def create
-        @cat = Cat.new(cat_params)
-        # replace the `artwork_attributes_here` with the actual attribute keys    
-        if @cat.save
-          redirect_to cat_url(@cat)
-        else
-          
-        end
+    def create
+      @cat = Cat.new(cat_params)
+      if @cat.save
+        redirect_to cat_url(@cat)
+      else
+        render :new
       end
+    end
     
       def show
         @cat = Cat.find(params[:id])
@@ -30,12 +29,12 @@ class CatsController < ApplicationController
       end
 
       def update
-        @artwork = Artwork.find(params[:id])
+        @cat = Cat.find(params[:id])
     
-        if @artwork.update(artwork_params) 
-          render json: @artwork
+        if @cat.update(cat_params) 
+          redirect_to cat_url(@cat)
         else
-          render json: @artwork.errors.full_messages, status: unprocessable_entity
+          render :edit
         end
       end
 
